@@ -1,7 +1,6 @@
 package com.banibegood.ulteam_gaming.repository
 
 import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
 import com.banibegood.ulteam_gaming.database.game.asDomainModel
@@ -13,6 +12,7 @@ import com.banibegood.ulteam_gaming.network.asDatabaseJoke
 import com.banibegood.ulteam_gaming.network.asDatabaseModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 
 class GamesRepository(private val database: GameDatabase) {
 
@@ -61,18 +61,22 @@ class GamesRepository(private val database: GameDatabase) {
     suspend fun refreshGames(){
         //switch context to IO thread
         withContext(Dispatchers.IO){
-            val games = GameApi.retrofitService.getGames().await()
+            Timber.i("LOADING GAMES ")
+//            val games = GameApi.retrofitService.getGamesAsync().await()
+            val games = GameApi.retrofitService.getGamesListAsync().await()
+
+            Timber.i(games.toString())
             //'*': kotlin spread operator.
             //Used for functions that expect a vararg param
             //just spreads the array into separate fields
-            database.gameDatabaseDao.insertAll(*games.asDatabaseModel())
+//            database.gameDatabaseDao.insertAll(*games.asDatabaseModel())
 //            Timber.i("end suspend")
         }
     }
 
 
     //create a new joke + return the resulting joke
-    suspend fun createJoke(newGame: Game): Game {
+    suspend fun createGame(newGame: Game): Game {
         //create a Data Transfer Object (Dto)
         val newApiGame = ApiGame(
             developer = newGame.developer,

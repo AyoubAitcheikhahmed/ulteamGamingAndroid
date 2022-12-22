@@ -11,9 +11,9 @@
         android:label="LoginActivity"
         tools:layout="@layout/activity_login"
         >
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@+id/homeFragment"/>
+<!--        <action-->
+<!--            android:id="@+id/action_loginFragment_to_homeFragment"-->
+<!--            app:destination="@+id/homeFragment"/>-->
     </activity>
 
     <activity
@@ -22,6 +22,13 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
     </activity>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.banibegood.ulteam_gaming.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+    </fragment>
 
 
 

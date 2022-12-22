@@ -23,7 +23,7 @@ data class ApiGameContainer (
 data class ApiGame(
     val developer: String,
 
-    @Json(name="freetogameProfileUrl")
+    @Json(name="freetogame_profile_url")
     val freetogameProfileUrl: String,
 
     @Json(name="game_url")

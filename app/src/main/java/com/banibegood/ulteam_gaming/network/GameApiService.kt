@@ -8,11 +8,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.Headers
-import retrofit2.http.POST
-
 
 
 private const val BASE_URL = "https://www.freetogame.com/api/"
@@ -40,7 +36,10 @@ private val retrofit = Retrofit.Builder()
 interface GameApiService{
 
     @GET("games")
-    fun getGames(): Deferred<ApiGameContainer>
+    fun getGamesAsync(): Deferred<ApiGameContainer>
+
+    @GET("games")
+    fun getGamesListAsync(): Deferred<List<ApiGame>>
 }
 
 object GameApi {

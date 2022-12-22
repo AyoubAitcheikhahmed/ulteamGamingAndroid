@@ -1,13 +1,50 @@
 package com.banibegood.ulteam_gaming.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
+import com.banibegood.ulteam_gaming.database.game.GameDatabase
+import com.banibegood.ulteam_gaming.database.game.GameDatabaseDao
+import com.banibegood.ulteam_gaming.repository.GamesRepository
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+enum class GameApiStatus { LOADING, ERROR, DONE }
+
+class HomeViewModel(
+    application: Application) : AndroidViewModel(application) {
+
+    private val _status = MutableLiveData<GameApiStatus>()
+    val status: LiveData<GameApiStatus>
+    get() = _status
+
+    private val database = GameDatabase.getInstance(application.applicationContext)
+    private val gamesRepository = GamesRepository(database)
+
+    val games = gamesRepository.games
+
+    init {
+        viewModelScope.launch {
+            _status.value = GameApiStatus.LOADING
+            gamesRepository.refreshGames()
+            _status.value = GameApiStatus.DONE
+        }
     }
-    val text: LiveData<String> = _text
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+    }
+
+
+    class Factory(val app: Application) : ViewModelProvider.Factory {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
+                @Suppress("UNCHECKED_CAST")
+                return HomeViewModel(app) as T
+            }
+            throw IllegalArgumentException("Unable to construct viewmodel")
+        }
+    }
+
 }
