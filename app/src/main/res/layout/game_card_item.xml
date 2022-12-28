@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="game"
+            type="com.banibegood.ulteam_gaming.domain.Game" />
+        <variable
+            name="clickListener"
+            type="com.banibegood.ulteam_gaming.ui.home.GamesListener" />
+    </data>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,9 +17,12 @@
     app:cardCornerRadius="@dimen/margin_14dp"
     app:cardUseCompatPadding="true">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(game)}">
 
 
         <androidx.cardview.widget.CardView
@@ -81,5 +93,5 @@
 
 </com.google.android.material.card.MaterialCardView>
 
-
+</layout>
 

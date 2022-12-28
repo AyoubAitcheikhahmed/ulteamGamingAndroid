@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.banibegood.ulteam_gaming.databinding.GameCardItemBinding
 import com.banibegood.ulteam_gaming.domain.Game
+import timber.log.Timber
 
 class GameAdapter(val clickListener : GamesListener) : ListAdapter<Game, ViewHolder>(GameDiffCallback()){
     //taken care of by ListAdapter
@@ -23,6 +24,8 @@ class GameAdapter(val clickListener : GamesListener) : ListAdapter<Game, ViewHol
 
     //fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        Timber.tag("Filling").i("filling------------------------------")
+
         val item = getItem(position)
         holder.bind(clickListener, item)
     }
@@ -40,7 +43,11 @@ class ViewHolder(val binding: GameCardItemBinding): RecyclerView.ViewHolder(bind
     fun bind(clickListener: GamesListener, item: Game) {
         binding.gameTitle.text = item.title
         binding.gameDetails.text = item.shortDescription
-        TODO("IMAGE URL")
+
+        binding.game =item
+        binding.clickListener = clickListener
+        binding.executePendingBindings()
+
     }
 
     //this way the viewHolder knows how to inflate.

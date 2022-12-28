@@ -59,13 +59,12 @@ class GamesRepository(private val database: GameDatabase) {
 
     //Database call
     suspend fun refreshGames(){
+
         //switch context to IO thread
         withContext(Dispatchers.IO){
-            Timber.i("LOADING GAMES ")
 //            val games = GameApi.retrofitService.getGamesAsync().await()
             val games = GameApi.retrofitService.getGamesListAsync().await()
 
-            Timber.i(games.toString())
             //'*': kotlin spread operator.
             //Used for functions that expect a vararg param
             //just spreads the array into separate fields
@@ -103,9 +102,4 @@ class GamesRepository(private val database: GameDatabase) {
         //the returned joke can be used to pass as save arg to the next fragment (e.g)
         return newGame
     }
-
-
-
-
-
 }

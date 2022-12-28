@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
 import com.banibegood.ulteam_gaming.databinding.FragmentHomeBinding
 import com.banibegood.ulteam_gaming.domain.Game
+import timber.log.Timber
 
 class HomeFragment : Fragment() {
 
@@ -40,16 +41,18 @@ class HomeFragment : Fragment() {
         adapter = GameAdapter( GamesListener{
                 gameId ->
             Toast.makeText(context, "${gameId}", Toast.LENGTH_SHORT).show()
+
         })
-//        binding.gamesList.adapter = adapter
+        binding.gamesList.adapter = adapter
 //        binding.gamesList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 //
        //
-        layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        home_recycler = binding.gamesList
-        home_recycler.layoutManager = layoutManager
-        home_recycler.adapter = adapter
+//        layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+//        home_recycler = binding.gamesList
+//        home_recycler.layoutManager = layoutManager
+//        home_recycler.adapter = adapter
         //
+
         //viewmodel
         val viewModelFactory = HomeViewModelFactory(application, adapter)
         viewModel = ViewModelProvider(this, viewModelFactory).get(HomeViewModel::class.java)
@@ -57,8 +60,9 @@ class HomeFragment : Fragment() {
         //databinding
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-
         viewModel.games.observe(viewLifecycleOwner, Observer {
+
+
             adapter.submitList(it)
         })
 

@@ -7,24 +7,26 @@
             name="viewModel"
             type="com.banibegood.ulteam_gaming.ui.home.HomeViewModel" />
     </data>
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".fragments.home.fragment_home">
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".fragments.home.fragment_home">-->
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:context=".fragments.home.fragment_home">
 
             <LinearLayout
                 android:id="@+id/top_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/padding_parent">
+                android:padding="@dimen/padding_parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -35,7 +37,7 @@
                         android:id="@+id/photo"
                         android:layout_width="@dimen/photo_size"
                         android:layout_height="@dimen/photo_size"
-                        android:src="@drawable/ic_person"/>
+                        android:src="@drawable/ic_person" />
 
                     <LinearLayout
                         android:layout_width="213dp"
@@ -93,13 +95,9 @@
                     android:id="@+id/gamesList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/top_info"
-                    tools:listitem="@layout/game_card_item"
-                    android:clipToPadding="false"
-                    tools:itemCount="7"
-                    />
-
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/game_card_item" />
             </LinearLayout>
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.core.widget.NestedScrollView>-->
 </layout>
