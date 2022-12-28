@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.banibegood.ulteam_gaming.R
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
 import com.banibegood.ulteam_gaming.databinding.FragmentHomeBinding
 import com.banibegood.ulteam_gaming.domain.Game
@@ -18,12 +20,12 @@ import timber.log.Timber
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+
+    private lateinit var binding: FragmentHomeBinding
     private lateinit var home_recycler : RecyclerView
     private var layoutManager : RecyclerView.LayoutManager? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
-    lateinit var binding :FragmentHomeBinding
     lateinit var viewModel : HomeViewModel
     lateinit var adapter: GameAdapter
 
@@ -32,8 +34,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container,false)
         //setup the db connection
         val application = requireNotNull(this.activity).application
         val dataSource = GameDatabase.getInstance(application).gameDatabaseDao
@@ -59,10 +60,7 @@ class HomeFragment : Fragment() {
 
         //databinding
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
         viewModel.games.observe(viewLifecycleOwner, Observer {
-
-
             adapter.submitList(it)
         })
 
@@ -80,10 +78,5 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        }
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
