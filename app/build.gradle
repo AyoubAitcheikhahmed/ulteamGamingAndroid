@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
-////apply from: '../ktlint.gradle'
+//apply from: '../ktlint.gradle'
 //// Adding the apply plugin statement for safeargs
 //apply plugin: 'kotlin-kapt'
 //apply plugin: 'androidx.navigation.safeargs'
@@ -54,9 +54,9 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
@@ -110,3 +110,5 @@ dependencies {
     // Glide
     implementation "com.github.bumptech.glide:glide:4.8.0"
 }
+
+check.dependsOn ktlint

@@ -1,20 +1,16 @@
 package com.banibegood.ulteam_gaming.network
 
-
-import android.provider.ContactsContract
-import androidx.room.Database
 import androidx.room.PrimaryKey
 import com.banibegood.ulteam_gaming.database.game.GameEntity
 import com.banibegood.ulteam_gaming.domain.Game
 import com.squareup.moshi.Json
-import kotlinx.coroutines.Deferred
 
 /*ApiJoke: this is a DataTransferObject
 * it's goal is to get network data into our model data, the Joke
 */
 
 /*Container helps us parse the body into multiple jokes*/
-data class ApiGameContainer (
+data class ApiGameContainer(
     @Json(name = "body")
     val apiGames: List<ApiGame>
 )
@@ -23,10 +19,10 @@ data class ApiGameContainer (
 data class ApiGame(
     val developer: String,
 
-    @Json(name="freetogame_profile_url")
+    @Json(name = "freetogame_profile_url")
     val freetogameProfileUrl: String,
 
-    @Json(name="game_url")
+    @Json(name = "game_url")
     val gameUrl: String,
 
     val genre: String,
@@ -38,10 +34,10 @@ data class ApiGame(
 
     val publisher: String,
 
-    @Json(name="release_date")
+    @Json(name = "release_date")
     val releaseDate: String,
 
-    @Json(name="short_description")
+    @Json(name = "short_description")
     val shortDescription: String,
 
     val thumbnail: String,
@@ -52,7 +48,7 @@ data class ApiGame(
 /*
 * Convert network results into Domain jokes
 * */
-fun ApiGameContainer.asDomainModel(): List<Game>{
+fun ApiGameContainer.asDomainModel(): List<Game> {
     return apiGames.map {
         Game(
             developer = it.developer,
@@ -75,8 +71,8 @@ fun ApiGameContainer.asDomainModel(): List<Game>{
 *
 * returns an array that can be used in the insert call as vararg
 * */
-fun ApiGameContainer.asDatabaseModel(): Array<GameEntity>{
-    return apiGames.map{
+fun ApiGameContainer.asDatabaseModel(): Array<GameEntity> {
+    return apiGames.map {
         GameEntity(
             developer = it.developer,
             freetogameProfileUrl = it.freetogameProfileUrl,
@@ -88,14 +84,15 @@ fun ApiGameContainer.asDatabaseModel(): Array<GameEntity>{
             releaseDate = it.freetogameProfileUrl,
             shortDescription = it.shortDescription,
             thumbnail = it.thumbnail,
-            title = it.title)
+            title = it.title
+        )
     }.toTypedArray()
 }
 
 /*
 * Convert a single api joke to a database joke
 * */
-fun ApiGame.asDatabaseJoke(): GameEntity{
+fun ApiGame.asDatabase(): GameEntity {
     return GameEntity(
         developer = developer,
         freetogameProfileUrl = freetogameProfileUrl,

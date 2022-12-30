@@ -1,9 +1,6 @@
 package com.banibegood.ulteam_gaming.domain
 
-import androidx.room.PrimaryKey
-import com.squareup.moshi.Json
-
-data class Game (
+data class Game(
     val developer: String,
     val freetogameProfileUrl: String,
     val gameUrl: String,

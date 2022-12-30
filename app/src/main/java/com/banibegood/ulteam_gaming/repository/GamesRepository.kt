@@ -8,11 +8,9 @@ import com.banibegood.ulteam_gaming.domain.Game
 import com.banibegood.ulteam_gaming.network.ApiGame
 import com.banibegood.ulteam_gaming.network.GameApi
 import com.banibegood.ulteam_gaming.network.GameApi.mockPutGame
-import com.banibegood.ulteam_gaming.network.asDatabaseJoke
-import com.banibegood.ulteam_gaming.network.asDatabaseModel
+import com.banibegood.ulteam_gaming.network.asDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import timber.log.Timber
 
 class GamesRepository(private val database: GameDatabase) {
 
@@ -31,52 +29,49 @@ class GamesRepository(private val database: GameDatabase) {
     * Helper function for livedata (uses a MediatorLiveData object in the background)
     * */
 
-    //Network call
-    //get jokes from the database, but transform them with map
+    // Network call
+    // get jokes from the database, but transform them with map
     val games = MediatorLiveData<List<Game>>()
 
-
-    //keep a reference to the original livedata
-    private var changeableLiveData = Transformations.map(database.gameDatabaseDao.getAllGamesLive()){
+    // keep a reference to the original livedata
+    private var changeableLiveData = Transformations.map(database.gameDatabaseDao.getAllGamesLive()) {
         it.asDomainModel()
     }
 
-    //add the data to the mediator
+    // add the data to the mediator
     init {
         games.addSource(
             changeableLiveData
-        ){
+        ) {
             games.setValue(it)
         }
     }
 
-    //filter is now less complex
+    // filter is now less complex
 //    fun addFilterSolution2(filter: String?){
 //        //remove the original source
 //        this.filter.value = filter
 //    }
 
+    // Database call
+    suspend fun refreshGames() {
 
-    //Database call
-    suspend fun refreshGames(){
-
-        //switch context to IO thread
-        withContext(Dispatchers.IO){
+        // switch context to IO thread
+        withContext(Dispatchers.IO) {
 //            val games = GameApi.retrofitService.getGamesAsync().await()
             val games = GameApi.retrofitService.getGamesListAsync().await()
 
-            //'*': kotlin spread operator.
-            //Used for functions that expect a vararg param
-            //just spreads the array into separate fields
+            // '*': kotlin spread operator.
+            // Used for functions that expect a vararg param
+            // just spreads the array into separate fields
 //            database.gameDatabaseDao.insertAll(*games.asDatabaseModel())
 //            Timber.i("end suspend")
         }
     }
 
-
-    //create a new joke + return the resulting joke
+    // create a new joke + return the resulting joke
     suspend fun createGame(newGame: Game): Game {
-        //create a Data Transfer Object (Dto)
+        // create a Data Transfer Object (Dto)
         val newApiGame = ApiGame(
             developer = newGame.developer,
             freetogameProfileUrl = newGame.freetogameProfileUrl,
@@ -90,16 +85,16 @@ class GamesRepository(private val database: GameDatabase) {
             thumbnail = newGame.thumbnail,
             title = newGame.title
         )
-        //use retrofit to put the joke.
-        //a put function usually returns the object that was put
+        // use retrofit to put the joke.
+        // a put function usually returns the object that was put
 
-        //val checkApiJoke = JokeApi.retrofitService.putJoke(newApiJoke).await()
+        // val checkApiJoke = JokeApi.retrofitService.putJoke(newApiJoke).await()
         val checkApiGame = GameApi.retrofitService.mockPutGame(newApiGame)
 
-        //the put results in a JokeApi object
-        //when the put is done, update the local db as well
-        database.gameDatabaseDao.insert(checkApiGame.asDatabaseJoke())
-        //the returned joke can be used to pass as save arg to the next fragment (e.g)
+        // the put results in a JokeApi object
+        // when the put is done, update the local db as well
+        database.gameDatabaseDao.insert(checkApiGame.asDatabase())
+        // the returned joke can be used to pass as save arg to the next fragment (e.g)
         return newGame
     }
 }

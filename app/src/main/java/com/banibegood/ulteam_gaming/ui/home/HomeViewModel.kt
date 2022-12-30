@@ -1,22 +1,26 @@
 package com.banibegood.ulteam_gaming.ui.home
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
-import com.banibegood.ulteam_gaming.database.game.GameDatabaseDao
 import com.banibegood.ulteam_gaming.repository.GamesRepository
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
-
 enum class GameApiStatus { LOADING, ERROR, DONE }
 
 class HomeViewModel(
-    application: Application) : AndroidViewModel(application) {
+    application: Application
+) : AndroidViewModel(application) {
 
     private val _status = MutableLiveData<GameApiStatus>()
     val status: LiveData<GameApiStatus>
-    get() = _status
+        get() = _status
 
     private val database = GameDatabase.getInstance(application.applicationContext)
     private val gamesRepository = GamesRepository(database)
@@ -36,7 +40,6 @@ class HomeViewModel(
         viewModelScope.cancel()
     }
 
-
     class Factory(val app: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
@@ -46,5 +49,4 @@ class HomeViewModel(
             throw IllegalArgumentException("Unable to construct viewmodel")
         }
     }
-
 }

@@ -1,20 +1,18 @@
 package com.banibegood.ulteam_gaming.database.game
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.banibegood.ulteam_gaming.domain.Game
 import com.squareup.moshi.Json
 
-
 @Entity(tableName = "games_table")
 data class GameEntity(
     val developer: String,
 
-    @Json(name="freetogameProfileUrl")
+    @Json(name = "freetogameProfileUrl")
     val freetogameProfileUrl: String,
 
-    @Json(name="game_url")
+    @Json(name = "game_url")
     val gameUrl: String,
 
     val genre: String,
@@ -26,10 +24,10 @@ data class GameEntity(
 
     val publisher: String,
 
-    @Json(name="release_date")
+    @Json(name = "release_date")
     val releaseDate: String,
 
-    @Json(name="short_description")
+    @Json(name = "short_description")
     val shortDescription: String,
 
     val thumbnail: String,
@@ -37,8 +35,7 @@ data class GameEntity(
     val title: String
 )
 
-
-fun List<GameEntity>.asDomainModel() : List<Game>{
+fun List<GameEntity>.asDomainModel(): List<Game> {
     return map {
         Game(
             developer = it.developer,
@@ -53,6 +50,5 @@ fun List<GameEntity>.asDomainModel() : List<Game>{
             thumbnail = it.thumbnail,
             title = it.title
         )
-
     }
 }

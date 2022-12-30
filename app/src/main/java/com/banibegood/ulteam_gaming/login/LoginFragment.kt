@@ -1,21 +1,6 @@
 package com.banibegood.ulteam_gaming.login
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.auth0.android.Auth0
-import com.auth0.android.authentication.AuthenticationAPIClient
-import com.auth0.android.authentication.AuthenticationException
-import com.auth0.android.callback.Callback
-import com.auth0.android.provider.WebAuthProvider
-import com.auth0.android.result.Credentials
-import com.auth0.android.result.UserProfile
-import com.banibegood.ulteam_gaming.R
 
 class LoginFragment : Fragment() {
 
@@ -139,7 +124,4 @@ class LoginFragment : Fragment() {
 //                    setLoggedInText()
 //                }
 //            })
-
-
-    }
-
+}
