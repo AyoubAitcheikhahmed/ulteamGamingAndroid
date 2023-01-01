@@ -3,11 +3,12 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'
 }
-//apply from: '../ktlint.gradle'
+apply from: '../ktlint.gradle'
 //// Adding the apply plugin statement for safeargs
-//apply plugin: 'kotlin-kapt'
-//apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'kotlin-kapt'
+
 
 android {
     namespace 'com.banibegood.ulteam_gaming'
@@ -22,7 +23,6 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Auth0
         manifestPlaceholders = [auth0Domain: "dev-18w6525q.us.auth0.com", auth0Scheme: "demo"]

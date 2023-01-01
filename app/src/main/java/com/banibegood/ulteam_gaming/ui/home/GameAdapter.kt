@@ -24,8 +24,6 @@ class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHold
 
     // fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Timber.tag("Filling").i("filling------------------------------")
-
         val item = getItem(position)
         holder.bind(clickListener, item)
     }

@@ -5,10 +5,8 @@ import androidx.lifecycle.Transformations
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
 import com.banibegood.ulteam_gaming.database.game.asDomainModel
 import com.banibegood.ulteam_gaming.domain.Game
-import com.banibegood.ulteam_gaming.network.ApiGame
-import com.banibegood.ulteam_gaming.network.GameApi
+import com.banibegood.ulteam_gaming.network.*
 import com.banibegood.ulteam_gaming.network.GameApi.mockPutGame
-import com.banibegood.ulteam_gaming.network.asDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -60,11 +58,11 @@ class GamesRepository(private val database: GameDatabase) {
         withContext(Dispatchers.IO) {
 //            val games = GameApi.retrofitService.getGamesAsync().await()
             val games = GameApi.retrofitService.getGamesListAsync().await()
-
+            val apiGameContainer = ApiGameContainer(games)
             // '*': kotlin spread operator.
             // Used for functions that expect a vararg param
             // just spreads the array into separate fields
-//            database.gameDatabaseDao.insertAll(*games.asDatabaseModel())
+            database.gameDatabaseDao.insertAll(*apiGameContainer.asDatabaseModel())
 //            Timber.i("end suspend")
         }
     }
@@ -98,3 +96,4 @@ class GamesRepository(private val database: GameDatabase) {
         return newGame
     }
 }
+

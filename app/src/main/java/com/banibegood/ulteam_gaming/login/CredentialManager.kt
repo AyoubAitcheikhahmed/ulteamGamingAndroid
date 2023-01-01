@@ -38,7 +38,6 @@ object CredentialsManager {
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
-
         return sp.getString(ACCESS_TOKEN, null)
     }
 }

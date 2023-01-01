@@ -15,4 +15,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="free_orientation_week">Free orientation week</string>
+    <string name="picture">picture</string>
+    <string name="apex_legend">Apex legend</string>
+    <string name="rocketleague">Rocketleague</string>
+    <string name="elmehdi_hmaidout">Elmehdi Hmaidout</string>
+    <string name="auth_client_id">l8AAOKyEtSR9ZTYpkYHBAvdhiafRAem5</string>
+    <string name="auth_domain">dev-34cf1iyfd5qqjt8j.us.auth0.com</string>
 </resources>

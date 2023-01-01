@@ -19,7 +19,7 @@ interface GameDatabaseDao {
     @Update
     fun update(game: GameEntity)
 
-    @Query("SELECT * FROM games_table ORDER BY id DESC")
+    @Query("SELECT * FROM games_table ORDER BY id DESC LIMIT 10")
     fun getAllGamesLive(): LiveData<List<GameEntity>>
 
     @Query("SELECT * FROM games_table ORDER BY id DESC")
