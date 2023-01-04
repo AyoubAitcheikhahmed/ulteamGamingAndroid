@@ -13,15 +13,26 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="ulteamButton">
         <item name="cornerRadius">@dimen/margin_30dp</item>
         <item name="textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="ulteamLoginButton">
         <item name="cornerRadius">@dimen/margin_10dp</item>
         <item name="textAllCaps">false</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <style name="Theme.Ulteamgaming.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Ulteamgaming.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Ulteamgaming.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

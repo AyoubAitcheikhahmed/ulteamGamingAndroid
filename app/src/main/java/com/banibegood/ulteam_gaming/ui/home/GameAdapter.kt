@@ -1,15 +1,21 @@
 package com.banibegood.ulteam_gaming.ui.home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.Coil
+import coil.load
 import com.banibegood.ulteam_gaming.databinding.GameCardItemBinding
+import com.banibegood.ulteam_gaming.domain.AppGlideModule
 import com.banibegood.ulteam_gaming.domain.Game
+import com.bumptech.glide.Glide
 import timber.log.Timber
 
-class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHolder>(GameDiffCallback()) {
+class GameAdapter(val clickListener: GamesListener, val context: Context) : ListAdapter<Game, ViewHolder>(GameDiffCallback()) {
     // taken care of by ListAdapter
     /*var data = listOf<Joke>()
     set(value) {
@@ -37,7 +43,21 @@ class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHold
 
 class ViewHolder(val binding: GameCardItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
+    val context: Context = this.itemView.context
     fun bind(clickListener: GamesListener, item: Game) {
+
+        //GLIDE
+        val imageView: ImageView = binding.roundedImageView
+        val currentUrl: String = item.thumbnail
+
+        Glide.with(context)
+            .load(currentUrl)
+//            .centerCrop()
+            .into(imageView)
+
+        //
+
+
         binding.gameTitle.text = item.title
         binding.gameDetails.text = item.shortDescription
 

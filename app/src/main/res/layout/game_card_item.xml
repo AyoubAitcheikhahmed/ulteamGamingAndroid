@@ -11,85 +11,87 @@
             type="com.banibegood.ulteam_gaming.ui.home.GamesListener" />
     </data>
 
-<com.google.android.material.card.MaterialCardView
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/margin_100dp"
-    app:cardBackgroundColor="@color/card_background"
-    app:cardCornerRadius="@dimen/margin_5dp"
-    app:cardUseCompatPadding="true">
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/margin_100dp"
         android:onClick="@{() -> clickListener.onClick(game)}">
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/game_image"
-            android:layout_width="@dimen/margin_150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="10dp"
-            android:padding="@dimen/margin_20dp"
-            app:cardCornerRadius="@dimen/margin_14dp"
-            app:layout_constrainedHeight="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/margin_100dp"-->
+<!--            app:cardBackgroundColor="@color/card_background"-->
+<!--            app:cardCornerRadius="@dimen/margin_5dp"-->
+<!--            app:cardUseCompatPadding="true"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100dp"
+            android:layout_margin="@dimen/margin_5dp"
+            android:background="@drawable/rounded_background"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/game_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:padding="@dimen/margin_5dp"
+                android:text="Overwatch 2"
+                android:textAlignment="textStart"
+                android:textColor="@color/ulteamGreen"
+                android:textSize="@dimen/margin_14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/game_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintHorizontal_bias="0.2"/>
+
+            <TextView
+                android:id="@+id/game_details"
+                android:layout_width="216dp"
+                android:layout_height="52dp"
+                android:layout_marginBottom="4dp"
+                android:padding="@dimen/margin_5dp"
+                android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/roundedImageView"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <ImageView
                 android:id="@+id/roundedImageView"
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/margin_100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:background="@color/white"
+                android:background="@drawable/rounded_background"
                 android:contentDescription="gameDetails"
-                android:scaleType="centerCrop"
-                android:src="@drawable/overwatch" />
-        </androidx.cardview.widget.CardView>
-
-
-        <TextView
-            android:id="@+id/game_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="159dp"
-            android:padding="@dimen/margin_5dp"
-            android:text="Overwatch 2"
-            android:textColor="@color/ulteamGreen"
-            android:textSize="@dimen/margin_14dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/game_image"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_conversion_absoluteHeight="19dp"
-            tools:layout_conversion_absoluteWidth="80dp"
-            tools:layout_editor_absoluteY="7dp" />
-
-        <TextView
-            android:id="@+id/game_details"
-            android:layout_width="241dp"
-            android:layout_height="69dp"
-            android:layout_marginEnd="8dp"
-            android:padding="@dimen/margin_5dp"
-            android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
-            android:textColor="@color/white"
-            android:textSize="@dimen/margin_8dp"
-            app:layout_constraintEnd_toStartOf="@+id/game_image"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/game_title"
-            tools:layout_conversion_absoluteHeight="72dp"
-            tools:layout_conversion_absoluteWidth="189dp" />
+                android:src="@drawable/overwatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
-</com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
 
 </layout>
 

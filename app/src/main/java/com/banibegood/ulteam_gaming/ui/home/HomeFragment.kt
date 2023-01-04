@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.auth0.android.Auth0
 import com.auth0.android.authentication.AuthenticationAPIClient
 import com.auth0.android.authentication.AuthenticationException
@@ -24,6 +25,8 @@ import com.banibegood.ulteam_gaming.R
 import com.banibegood.ulteam_gaming.database.game.GameDatabase
 import com.banibegood.ulteam_gaming.databinding.FragmentHomeBinding
 import com.banibegood.ulteam_gaming.login.CredentialsManager
+import com.banibegood.ulteam_gaming.repository.GamesRepository
+import okhttp3.internal.notify
 import timber.log.Timber
 
 class HomeFragment : Fragment() {
@@ -31,10 +34,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var home_recycler: RecyclerView
     private var layoutManager: RecyclerView.LayoutManager? = null
-
-    private lateinit var account : Auth0
     private lateinit var loggedInText: TextView
-    private var loggedIn = true
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -52,22 +52,9 @@ class HomeFragment : Fragment() {
         val dataSource = GameDatabase.getInstance(application).gameDatabaseDao
         // filling the list: joke adapter
         adapter = GameAdapter(
-            GamesListener {
-                gameId ->
-                Toast.makeText(context, "$gameId", Toast.LENGTH_SHORT).show()
-            }
+            GamesListener { gameId -> Toast.makeText(context, "$gameId", Toast.LENGTH_SHORT).show() },
+            application.applicationContext
         )
-        //OAUTH
-        account = Auth0(
-            getString(R.string.auth_client_id),
-            getString(R.string.auth_domain)
-        )
-
-        val loginButton = binding.loginButton
-        loginButton?.setOnClickListener {
-//            loginWithBrowser()
-        }
-
 
         binding.gamesList.adapter = adapter
         val viewModelFactory = HomeViewModelFactory(application, adapter)
@@ -75,17 +62,91 @@ class HomeFragment : Fragment() {
 
         // databinding
         binding.viewModel = viewModel
+
+        home_recycler = binding.gamesList
+
+        val swipeRefreshLayout = binding.swipeRefreshLayout
+        swipeRefreshLayout.setOnRefreshListener {
+            printState()
+            if(viewModel.connectivityIntercepter(application.applicationContext)){
+                connectElements()
+                viewModel.initBlock(application)
+            }else{
+                disconnectElements()
+            }
+            printState()
+
+//            if(viewModel.connectivityIntercepter(application.applicationContext)) {
+//                adapter.notify()
+//            }else{
+//                disconnectElements()
+//            }
+            swipeRefreshLayout.isRefreshing = false
+        }
+
+        val swipeRefreshLayoutError = binding.swipeRefreshLayoutError
+        swipeRefreshLayoutError.setOnRefreshListener {
+            printState()
+            if(viewModel.connectivityIntercepter(application.applicationContext)){
+                connectElements()
+                viewModel.initBlock(application)
+            }else{
+                disconnectElements()
+            }
+            printState()
+
+//            if(viewModel.connectivityIntercepter(application.applicationContext)) {
+//                adapter.notify()
+//            }else{
+//                disconnectElements()
+//            }
+            swipeRefreshLayout.isRefreshing = false
+        }
+
         viewModel.games.observe(
             viewLifecycleOwner,
             Observer {
-                adapter.submitList(it)
+                if(viewModel.connectivityIntercepter(application.applicationContext)){
+                    connectElements()
+                    adapter.submitList(it)
+                }else{
+                    disconnectElements()
+                }
             }
         )
 
         binding.inputSearch.visibility = if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) View.GONE else View.VISIBLE
-        binding.loginButton.visibility = if (loggedIn) View.GONE else View.VISIBLE
-
         return binding.root
+    }
+
+    fun disconnectElements(){
+        binding.swipeRefreshLayout.visibility = View.GONE
+        binding.swipeRefreshLayoutError.visibility = View.VISIBLE
+
+    }
+
+    fun connectElements(){
+        binding.swipeRefreshLayout.visibility = View.VISIBLE
+        binding.swipeRefreshLayoutError.visibility = View.GONE
+
+    }
+
+
+    fun addRefreshOnScrollListener(recyclerView: RecyclerView) {
+        recyclerView
+    }
+
+    fun printState(){
+        if(binding.swipeRefreshLayout.visibility == View.VISIBLE){
+            Timber.tag("VISIBILITY GAMELIST ").i("_VISIBLE")
+        }else if (binding.swipeRefreshLayout.visibility == View.GONE){
+            Timber.tag("VISIBILITY GAMELIST ").i("_INVISIBLE")
+        }
+        if(binding.swipeRefreshLayoutError.visibility == View.VISIBLE){
+            Timber.tag("VISIBILITY ERROR ").i("_VISIBLE")
+        }else if (binding.swipeRefreshLayoutError.visibility == View.GONE){
+            Timber.tag("VISIBILITY ERROR ").i("_INVISIBLE")
+        }
     }
 
 
