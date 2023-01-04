@@ -20,6 +20,8 @@
     <string name="apex_legend">Apex legend</string>
     <string name="rocketleague">Rocketleague</string>
     <string name="elmehdi_hmaidout">Elmehdi Hmaidout</string>
-    <string name="auth_client_id">l8AAOKyEtSR9ZTYpkYHBAvdhiafRAem5</string>
+    <string name="auth_client_id">NjIq0EHu5BZ7lsUPPOECENSDDxRE2Y6G</string>
     <string name="auth_domain">dev-34cf1iyfd5qqjt8j.us.auth0.com</string>
+    <string name="title_user">User</string>
+    <string name="title_login">Login</string>
 </resources>

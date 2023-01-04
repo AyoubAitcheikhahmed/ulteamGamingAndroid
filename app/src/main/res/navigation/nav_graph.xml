@@ -3,18 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginActivity">
-
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.banibegood.ulteam_gaming.ui.login.LoginActivity"
-        android:label="LoginActivity"
-        tools:layout="@layout/activity_login"
-        >
-<!--        <action-->
-<!--            android:id="@+id/action_loginFragment_to_homeFragment"-->
-<!--            app:destination="@+id/homeFragment"/>-->
-    </activity>
+    app:startDestination="@id/homeFragment">
 
     <activity
         android:id="@+id/homeFragment"
@@ -22,16 +11,17 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
     </activity>
+
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.banibegood.ulteam_gaming.ui.dashboard.DashboardFragment"
         android:label="Dashboard"
-        tools:layout="@layout/fragment_dashboard">
+        tools:layout="@layout/fragment_dashboard"/>
 
-    </fragment>
-
-
-
-
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.banibegood.ulteam_gaming.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"/>
 
 </navigation>

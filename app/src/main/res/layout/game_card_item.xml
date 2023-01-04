@@ -47,40 +47,42 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:background="@color/white"
+                android:contentDescription="gameDetails"
                 android:scaleType="centerCrop"
-                android:src="@drawable/overwatch"
-                android:contentDescription="gameDetails" />
+                android:src="@drawable/overwatch" />
         </androidx.cardview.widget.CardView>
 
 
-            <TextView
-                android:id="@+id/game_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Overwatch 2"
-                android:textColor="@color/ulteamGreen"
-                android:textSize="@dimen/margin_14dp"
-                android:padding="@dimen/margin_5dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_conversion_absoluteHeight="19dp"
-                tools:layout_conversion_absoluteWidth="80dp"
-                tools:layout_editor_absoluteX="6dp"
-                tools:layout_editor_absoluteY="7dp" />
+        <TextView
+            android:id="@+id/game_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="159dp"
+            android:padding="@dimen/margin_5dp"
+            android:text="Overwatch 2"
+            android:textColor="@color/ulteamGreen"
+            android:textSize="@dimen/margin_14dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/game_image"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="80dp"
+            tools:layout_editor_absoluteY="7dp" />
 
-            <TextView
-                android:id="@+id/game_details"
-                android:layout_width="241dp"
-                android:layout_height="69dp"
-                android:padding="@dimen/margin_5dp"
-                android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
-                android:textColor="@color/white"
-                android:textSize="@dimen/margin_8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/game_title"
-                app:layout_constraintRight_toLeftOf="@id/game_image"
-                tools:layout_conversion_absoluteHeight="72dp"
-                tools:layout_conversion_absoluteWidth="189dp" />
+        <TextView
+            android:id="@+id/game_details"
+            android:layout_width="241dp"
+            android:layout_height="69dp"
+            android:layout_marginEnd="8dp"
+            android:padding="@dimen/margin_5dp"
+            android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_8dp"
+            app:layout_constraintEnd_toStartOf="@+id/game_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_title"
+            tools:layout_conversion_absoluteHeight="72dp"
+            tools:layout_conversion_absoluteWidth="189dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

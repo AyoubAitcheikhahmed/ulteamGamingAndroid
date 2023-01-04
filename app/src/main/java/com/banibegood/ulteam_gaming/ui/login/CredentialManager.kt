@@ -1,10 +1,10 @@
 package com.banibegood.ulteam_gaming.login
-
 import android.content.Context
+import com.auth0.android.result.Credentials
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
-import com.auth0.android.result.Credentials
+
 
 object CredentialsManager {
     private val ACCESS_TOKEN = "access_token"
@@ -38,6 +38,7 @@ object CredentialsManager {
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
+
         return sp.getString(ACCESS_TOKEN, null)
     }
 }
