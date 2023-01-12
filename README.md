@@ -41,7 +41,7 @@
 -...
 ## How to use
 
-extract and let dependencies install 
+Extract and let dependencies install 
 
 [Back To The Top](#ulteam)
 
@@ -51,6 +51,7 @@ extract and let dependencies install
 ## 📝Extra Sources
 
 Hogent Repository of the course : [@dokka](https://github.com/HoGentTIN/mobile-app-development-android)
+
 [Back To The Top](#ulteam)
 
 ---
