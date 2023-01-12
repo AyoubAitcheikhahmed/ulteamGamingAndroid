@@ -47,13 +47,6 @@ extract and let dependencies install
 
 ---
 
-## API Reference
-
-- Link to API DOCS [@swaggerapi](https://ulteam-api.herokuapp.com/api-docs/)
-
-[Back To The Top](#ulteam)
-
----
 
 ## 📝Extra Sources
 
