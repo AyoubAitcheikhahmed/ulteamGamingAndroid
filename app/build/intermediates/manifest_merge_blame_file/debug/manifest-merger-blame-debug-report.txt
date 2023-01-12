@@ -1,0 +1,202 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.banibegood.ulteam_gaming"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:6:22-76
+13
+14    <queries>
+14-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:14:5-22:15
+15        <intent>
+15-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:15:9-21:18
+16            <action android:name="android.intent.action.VIEW" />
+16-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:16:13-65
+16-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:16:21-62
+17
+18            <category android:name="android.intent.category.BROWSABLE" />
+18-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:18:13-74
+18-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:18:23-71
+19
+20            <data android:scheme="https" />
+20-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:20:13-44
+20-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:20:19-41
+21        </intent>
+22    </queries>
+23
+24    <permission
+24-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+25        android:name="com.banibegood.ulteam_gaming.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="com.banibegood.ulteam_gaming.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+29
+30    <application
+30-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:8:5-43:19
+31        android:name="com.banibegood.ulteam_gaming.UlteamApplication"
+31-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:9:9-42
+32        android:allowBackup="true"
+32-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:10:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.9.0] C:\Users\AYOUB\.gradle\caches\transforms-3\9840487859163678e3be94b270a721d0\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:11:9-65
+35        android:debuggable="true"
+36        android:extractNativeLibs="false"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:12:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:13:9-43
+39        android:label="@string/app_name"
+39-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:14:9-41
+40        android:localeConfig="@xml/locales_config"
+40-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:15:9-51
+41        android:roundIcon="@mipmap/ic_launcher_round"
+41-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:16:9-54
+42        android:supportsRtl="true"
+42-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:17:9-35
+43        android:theme="@style/Theme.Ulteamgaming" >
+43-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:18:9-50
+44        <activity
+44-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:20:9-33:20
+45            android:name="com.banibegood.ulteam_gaming.ui.LoadActivity"
+45-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:21:13-44
+46            android:exported="true"
+46-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:22:13-36
+47            android:label="@string/title_activity_load"
+47-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:23:13-56
+48            android:theme="@style/Theme.Ulteamgaming.NoActionBar" >
+48-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:24:13-66
+49            <intent-filter>
+49-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:25:13-29:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:26:17-69
+50-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:26:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:28:17-77
+52-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:28:27-74
+53            </intent-filter>
+54
+55            <meta-data
+55-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:30:13-32:36
+56                android:name="android.app.lib_name"
+56-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:31:17-52
+57                android:value="" />
+57-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:32:17-33
+58        </activity>
+59        <activity
+59-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:34:9-42:20
+60            android:name="com.banibegood.ulteam_gaming.MainActivity"
+60-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:35:13-41
+61            android:exported="true" >
+61-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:36:13-36
+62            <meta-data
+62-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:30:13-32:36
+63                android:name="android.app.lib_name"
+63-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:31:17-52
+64                android:value="" />
+64-->C:\Users\AYOUB\AndroidStudioProjects\ulteamgaming\app\src\main\AndroidManifest.xml:32:17-33
+65        </activity>
+66        <activity
+66-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:25:9-30:75
+67            android:name="com.auth0.android.provider.AuthenticationActivity"
+67-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:26:13-77
+68            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
+68-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:27:13-115
+69            android:exported="false"
+69-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:28:13-37
+70            android:launchMode="singleTask"
+70-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:29:13-44
+71            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+71-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:30:13-72
+72        <activity
+72-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:31:9-47:20
+73            android:name="com.auth0.android.provider.RedirectActivity"
+73-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:32:13-71
+74            android:exported="true" >
+74-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:33:13-36
+75            <intent-filter android:autoVerify="true" >
+75-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:34:13-46:29
+75-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:35:17-42
+76                <action android:name="android.intent.action.VIEW" />
+76-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:16:13-65
+76-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:16:21-62
+77
+78                <category android:name="android.intent.category.DEFAULT" />
+78-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:39:17-76
+78-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:39:27-73
+79                <category android:name="android.intent.category.BROWSABLE" />
+79-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:18:13-74
+79-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:18:23-71
+80
+81                <data
+81-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:20:13-44
+82                    android:host="dev-34cf1iyfd5qqjt8j.us.auth0.com"
+83                    android:pathPrefix="/android/com.banibegood.ulteam_gaming/callback"
+84                    android:scheme="demo" />
+84-->[com.auth0.android:auth0:2.8.1] C:\Users\AYOUB\.gradle\caches\transforms-3\85824d2d0e1e008e4684a02f81c7063f\transformed\jetified-auth0-2.8.1\AndroidManifest.xml:20:19-41
+85            </intent-filter>
+86        </activity>
+87
+88        <uses-library
+88-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+89            android:name="androidx.window.extensions"
+89-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+90            android:required="false" />
+90-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+91        <uses-library
+91-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+92            android:name="androidx.window.sidecar"
+92-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+93            android:required="false" />
+93-->[androidx.window:window:1.0.0] C:\Users\AYOUB\.gradle\caches\transforms-3\808f492fe6abd18267fa138823a0ff83\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+94
+95        <provider
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+96            android:name="androidx.startup.InitializationProvider"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+97            android:authorities="com.banibegood.ulteam_gaming.androidx-startup"
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+98            android:exported="false" >
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+99            <meta-data
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+101                android:value="androidx.startup" />
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AYOUB\.gradle\caches\transforms-3\1c9f362a40e2bef3bd2875754ae50b66\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AYOUB\.gradle\caches\transforms-3\86f00bbc2e5f72e56e17afe1b7708a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+103-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AYOUB\.gradle\caches\transforms-3\86f00bbc2e5f72e56e17afe1b7708a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+104                android:value="androidx.startup" />
+104-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AYOUB\.gradle\caches\transforms-3\86f00bbc2e5f72e56e17afe1b7708a40\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+105        </provider>
+106
+107        <service
+107-->[androidx.room:room-runtime:2.3.0] C:\Users\AYOUB\.gradle\caches\transforms-3\b1a25c9db6d53f794db17fadfc913754\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+108            android:name="androidx.room.MultiInstanceInvalidationService"
+108-->[androidx.room:room-runtime:2.3.0] C:\Users\AYOUB\.gradle\caches\transforms-3\b1a25c9db6d53f794db17fadfc913754\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+109            android:directBootAware="true"
+109-->[androidx.room:room-runtime:2.3.0] C:\Users\AYOUB\.gradle\caches\transforms-3\b1a25c9db6d53f794db17fadfc913754\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+110            android:exported="false" />
+110-->[androidx.room:room-runtime:2.3.0] C:\Users\AYOUB\.gradle\caches\transforms-3\b1a25c9db6d53f794db17fadfc913754\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+111    </application>
+112
+113</manifest>

@@ -1,0 +1,162 @@
+[
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ulteam_logo.png.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ulteam_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\raw_disconnect.json.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\raw\\disconnect.json"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\raw_gaming_console.json.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\raw\\gaming_console.json"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\raw_no_internet.json.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\raw\\no_internet.json"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_fragment_notifications.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_overwatch.jpg.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\overwatch.jpg"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_rounded_background.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\rounded_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_logo_ulteam_luncher.png.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\logo_ulteam_luncher.png"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_image.png.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\image.png"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\xml_locales_config.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\xml\\locales_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_game_card_item.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\game_card_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\raw_nointernet.json.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\raw\\nointernet.json"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\merged_res\\release\\layout_activity_load.xml.flat",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\activity_load.xml"
+    }
+]

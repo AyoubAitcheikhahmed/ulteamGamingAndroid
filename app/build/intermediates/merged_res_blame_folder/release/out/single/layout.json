@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_load.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\activity_load.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\game_card_item.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\game_card_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\AYOUB\\AndroidStudioProjects\\ulteamgaming\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

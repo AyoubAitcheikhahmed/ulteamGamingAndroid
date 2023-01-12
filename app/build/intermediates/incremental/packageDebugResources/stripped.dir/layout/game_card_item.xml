@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+    
+                 
+                       
+                                                              
+                 
+                                
+                                                                        
+           
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100dp"
+        android:tag="layout/game_card_item_0"                   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/margin_100dp"-->
+<!--            app:cardBackgroundColor="@color/card_background"-->
+<!--            app:cardCornerRadius="@dimen/margin_5dp"-->
+<!--            app:cardUseCompatPadding="true"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100dp"
+            android:layout_margin="@dimen/margin_5dp"
+            android:background="@drawable/rounded_background"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/game_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5dp"
+                android:text="Overwatch 2"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/ulteamGreen"
+                android:textSize="@dimen/margin_14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/game_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.071" />
+
+            <TextView
+                android:id="@+id/game_details"
+                android:layout_width="291dp"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:layout_marginBottom="16dp"
+                android:padding="@dimen/margin_5dp"
+                android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/roundedImageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="@dimen/margin_100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_background"
+                android:contentDescription="gameDetails"
+                android:src="@drawable/overwatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+         
