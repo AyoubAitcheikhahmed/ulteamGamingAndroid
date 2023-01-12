@@ -7,8 +7,13 @@ import androidx.lifecycle.ViewModel
 
 class LoginViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is LOGIN Fragment"
+    private val _username = MutableLiveData<String>()
+    val username: LiveData<String>
+    get() = _username
+
+
+    public fun setUsername(username: String){
+        _username.value = username
     }
-    val text: LiveData<String> = _text
+
 }

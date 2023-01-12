@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ulteam-gaming</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_notifications">Notification</string>
+    <string name="login">Se Connecter</string>
+    <string name="logout">Se Deconnecter</string>
+    <string name="prompt_email">Adresse Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">S\'inscrire</string>
+    <string name="action_sign_in_short">S\'inscrire</string>
+    <string name="invalid_username">Nom de compt incorrect</string>
+    <string name="invalid_password">Mot de passe doit contenire plus que 5 caracteres</string>
+    <string name="login_failed">Connexion echouee</string>
+    <string name="free_orientation_week">Semaine d\'orientation gratuite</string>
+    <string name="loading">Chargement…</string>
+    <string name="guest">Invitée</string>
+    <string name="guestSkill">Competence d\'invitée</string>
+</resources>

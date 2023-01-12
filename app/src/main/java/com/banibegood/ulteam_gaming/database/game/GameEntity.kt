@@ -40,12 +40,12 @@ fun List<GameEntity>.asDomainModel(): List<Game> {
         Game(
             developer = it.developer,
             freetogameProfileUrl = it.freetogameProfileUrl,
-            gameUrl = it.developer,
+            gameUrl = it.gameUrl,
             genre = it.genre,
             id = it.id,
             platform = it.platform,
-            publisher = it.developer,
-            releaseDate = it.freetogameProfileUrl,
+            publisher = it.publisher,
+            releaseDate = it.releaseDate,
             shortDescription = it.shortDescription,
             thumbnail = it.thumbnail,
             title = it.title

@@ -53,12 +53,12 @@ fun ApiGameContainer.asDomainModel(): List<Game> {
         Game(
             developer = it.developer,
             freetogameProfileUrl = it.freetogameProfileUrl,
-            gameUrl = it.developer,
+            gameUrl = it.gameUrl,
             genre = it.genre,
             id = it.id,
             platform = it.platform,
-            publisher = it.developer,
-            releaseDate = it.freetogameProfileUrl,
+            publisher = it.publisher,
+            releaseDate = it.releaseDate,
             shortDescription = it.shortDescription,
             thumbnail = it.thumbnail,
             title = it.title
@@ -76,12 +76,12 @@ fun ApiGameContainer.asDatabaseModel(): Array<GameEntity> {
         GameEntity(
             developer = it.developer,
             freetogameProfileUrl = it.freetogameProfileUrl,
-            gameUrl = it.developer,
+            gameUrl = it.gameUrl,
             genre = it.genre,
             id = it.id,
             platform = it.platform,
-            publisher = it.developer,
-            releaseDate = it.freetogameProfileUrl,
+            publisher = it.publisher,
+            releaseDate = it.releaseDate,
             shortDescription = it.shortDescription,
             thumbnail = it.thumbnail,
             title = it.title
@@ -96,12 +96,12 @@ fun ApiGame.asDatabase(): GameEntity {
     return GameEntity(
         developer = developer,
         freetogameProfileUrl = freetogameProfileUrl,
-        gameUrl = developer,
+        gameUrl = gameUrl,
         genre = genre,
         id = id,
         platform = platform,
-        publisher = developer,
-        releaseDate = freetogameProfileUrl,
+        publisher = publisher,
+        releaseDate = releaseDate,
         shortDescription = shortDescription,
         thumbnail = thumbnail,
         title = title

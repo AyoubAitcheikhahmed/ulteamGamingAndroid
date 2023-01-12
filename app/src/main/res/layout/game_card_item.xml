@@ -40,9 +40,9 @@
                 android:id="@+id/game_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:padding="@dimen/margin_5dp"
                 android:text="Overwatch 2"
+                android:paddingLeft="@dimen/margin_10dp"
                 android:textAlignment="textStart"
                 android:textColor="@color/ulteamGreen"
                 android:textSize="@dimen/margin_14dp"
@@ -50,21 +50,21 @@
                 app:layout_constraintBottom_toTopOf="@+id/game_details"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.2"
-                app:layout_constraintHorizontal_bias="0.2"/>
+                app:layout_constraintVertical_bias="0.071" />
 
             <TextView
                 android:id="@+id/game_details"
-                android:layout_width="216dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="4dp"
+                android:layout_width="291dp"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:layout_marginBottom="16dp"
                 android:padding="@dimen/margin_5dp"
                 android:text=" is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl."
                 android:textColor="@color/white"
                 android:textSize="@dimen/margin_8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/roundedImageView"
-                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView

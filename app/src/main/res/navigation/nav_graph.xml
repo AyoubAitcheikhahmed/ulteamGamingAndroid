@@ -5,12 +5,12 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
-    <activity
+    <fragment
         android:id="@+id/homeFragment"
         android:name="com.banibegood.ulteam_gaming.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
-    </activity>
+    </fragment>
 
     <fragment
         android:id="@+id/dashboardFragment"
