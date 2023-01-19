@@ -11,7 +11,7 @@ import androidx.room.Update
 interface GameDatabaseDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg jokes: GameEntity)
+    fun insertAll(vararg games: GameEntity)
 
     @Insert
     fun insert(game: GameEntity)

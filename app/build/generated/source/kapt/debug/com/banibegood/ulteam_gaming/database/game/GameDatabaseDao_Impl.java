@@ -18,7 +18,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
+import javax.annotation.Generated;
 
+@Generated("androidx.room.RoomProcessor")
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class GameDatabaseDao_Impl implements GameDatabaseDao {
   private final RoomDatabase __db;
@@ -218,11 +220,11 @@ public final class GameDatabaseDao_Impl implements GameDatabaseDao {
   }
 
   @Override
-  public void insertAll(final GameEntity... jokes) {
+  public void insertAll(final GameEntity... games) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      __insertionAdapterOfGameEntity.insert(jokes);
+      __insertionAdapterOfGameEntity.insert(games);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();

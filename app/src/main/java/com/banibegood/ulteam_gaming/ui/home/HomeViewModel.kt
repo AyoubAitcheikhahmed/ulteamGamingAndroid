@@ -22,7 +22,7 @@ class HomeViewModel(
 ) : AndroidViewModel(application) {
 
     private val _pictures = MutableLiveData<GamePicture>()
-    val pictures: MutableLiveData<GamePicture> = _pictures
+    var pictures: MutableLiveData<GamePicture> = _pictures
 
     private val _username = MutableLiveData<String>()
     val username: LiveData<String>
@@ -33,7 +33,7 @@ class HomeViewModel(
         get() = _status
 
     private val database = GameDatabase.getInstance(application.applicationContext)
-    private val gamesRepository = GamesRepository(database)
+    private var gamesRepository = GamesRepository(database)
 
     val games = gamesRepository.games
 
@@ -51,7 +51,7 @@ class HomeViewModel(
      * @param binding
      *
      */
-    private fun onInternetOffline(binding : FragmentHomeBinding){
+    fun onInternetOffline(binding : FragmentHomeBinding){
         binding.swipeRefreshLayout.visibility = View.GONE
         binding.swipeRefreshLayoutError.visibility = View.VISIBLE
     }

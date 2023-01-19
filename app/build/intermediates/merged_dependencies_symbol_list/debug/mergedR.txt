@@ -16184,6 +16184,8 @@ string androidx_startup
 
 androidx.tracing
 
+androidx.test.monitor
+
 androidx.interpolator
 
 androidx.lifecycle.livedata

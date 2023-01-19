@@ -19,12 +19,28 @@ public final class GamesRepository {
         return null;
     }
     
+    /**
+     * Refresh the games stored in the offline cache.
+     *
+     * This function uses the IO dispatcher to ensure the database insert database operation
+     * happens on the IO dispatcher. By switching to the IO dispatcher using `withContext` this
+     * function is now safe to call from any thread including the Main thread.
+     *
+     * @author: Banibegood- Ayoub ait cheikh ahmed
+     */
     @org.jetbrains.annotations.Nullable()
     public final java.lang.Object refreshGames(@org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super kotlin.Unit> continuation) {
         return null;
     }
     
+    /**
+     * Create an instance of create Game and use retrofit to put the game.
+     * when the put is done, update the local db as well
+     *
+     * @author: Banibegood
+     * @return: Game that was inserted to db
+     */
     @org.jetbrains.annotations.Nullable()
     public final java.lang.Object createGame(@org.jetbrains.annotations.NotNull()
     com.banibegood.ulteam_gaming.domain.Game newGame, @org.jetbrains.annotations.NotNull()

@@ -40,6 +40,7 @@
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Ulteamgaming" >
         <activity
             android:name="com.banibegood.ulteam_gaming.ui.LoadActivity"

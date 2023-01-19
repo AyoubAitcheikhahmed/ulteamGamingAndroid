@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
         // setup the db connection
         val application = requireNotNull(this.activity).application
         val dataSource = GameDatabase.getInstance(application).gameDatabaseDao
+
         // filling the list: joke adapter
         adapter = GameAdapter(
             GamesListener { gameId,gameLink ->
@@ -48,13 +49,7 @@ class HomeFragment : Fragment() {
                     webpage = Uri.parse("http://$gameLink")
                 }
                 val intent = Intent(Intent.ACTION_VIEW, webpage)
-                startActivity(intent)
-
-//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(gameLink))
-//                intent.action = Intent.ACTION_VIEW
-//                intent.data = Uri.parse(gameLink)
-//                startActivity(intent)
-                          },
+                startActivity(intent) },
             application.applicationContext
         )
 
@@ -90,12 +85,7 @@ class HomeFragment : Fragment() {
         )
 
         //
-        parentFragmentManager.setFragmentResultListener("requestKeyFromLogin",this) { key, bundle ->
-            // We use a String here, but any type that can be put in a Bundle is supported
-            val result = bundle.getString("username")
-            viewModel.setUsername(result)
-            viewModel.manageDisplayOnConnectivity(application.applicationContext,binding)
-        }
+
         //setting username
         viewModel.username.observe(
             viewLifecycleOwner,

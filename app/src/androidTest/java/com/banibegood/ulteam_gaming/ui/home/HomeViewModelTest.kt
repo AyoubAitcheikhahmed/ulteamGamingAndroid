@@ -1,63 +1,80 @@
 package com.banibegood.ulteam_gaming.ui.home
 
+
 import android.app.Application
 import android.content.Context
-import android.widget.Toast
-import org.junit.Assert.*
-import org.junit.Before
-import org.junit.Test
-
+import android.view.View
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.hamcrest.CoreMatchers.nullValue
-import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.core.Is.`is`
-import org.hamcrest.core.IsNot.not
+import com.banibegood.ulteam_gaming.MainActivity
+import com.banibegood.ulteam_gaming.database.game.GameDatabase
+import com.banibegood.ulteam_gaming.databinding.FragmentHomeBinding
+import com.banibegood.ulteam_gaming.domain.GamePicture
+import com.banibegood.ulteam_gaming.repository.GamesRepository
+import com.banibegood.ulteam_gaming.ui.home.GameApiStatus
+import com.banibegood.ulteam_gaming.ui.home.HomeViewModel
+import kotlinx.coroutines.*
+import kotlinx.coroutines.runBlocking
+import org.junit.Before
 import org.junit.Rule
+import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.Mockito
+import org.mockito.Mock
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.verify
+import org.mockito.MockitoAnnotations
+import org.robolectric.Robolectric
 
 @RunWith(AndroidJUnit4::class)
 class HomeViewModelTest {
 
     @get:Rule
-    var instantExecutorRule = InstantTaskExecutorRule()
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var application: Application
+
+    private lateinit var context: Context
+
+    @Mock
+    private lateinit var gamesRepository: GamesRepository
 
 
-    @Test
-    fun test_connectivity_intercepter_should_not_be_null() {
-        val application =  Mockito.mock(Application::class.java)
+    private lateinit var homeViewModel: HomeViewModel
 
-        val context  =  Mockito.mock(Context::class.java)
-        Mockito.`when`(application.applicationContext).thenReturn(context)
-
-
-        val adapter = GameAdapter(
-            GamesListener { gameId -> Toast.
-            makeText(application.applicationContext, "$gameId", Toast.LENGTH_SHORT).show() },
-            application.applicationContext
-        )
-        val viewModel = HomeViewModelFactory(application, adapter).create(HomeViewModel::class.java)
-        val result = viewModel.connectivityIntercepter(application.applicationContext)
-        assertThat(result, `is`(not(nullValue())))
+    @Before
+    fun setUp() {
+        binding = FragmentHomeBinding.inflate(Robolectric.buildActivity(MainActivity::class.java).get().layoutInflater)
+        application = ApplicationProvider.getApplicationContext()
+        context = ApplicationProvider.getApplicationContext()
+        homeViewModel = HomeViewModel(application)
     }
 
     @Test
-    fun pictures_should_be_null() {
-        val application =  Mockito.mock(Application::class.java)
+    fun Test_init_block() = runBlocking {
+        val picture = GamePicture("game1", "url1")
+        val pictures = MutableLiveData<GamePicture>()
+        pictures.value = picture
 
-        val context  =  Mockito.mock(Context::class.java)
-        Mockito.`when`(application.applicationContext).thenReturn(context)
-        val adapter = GameAdapter(
-            GamesListener { gameId -> Toast.
-            makeText(application.applicationContext, "$gameId", Toast.LENGTH_SHORT).show() },
-            application.applicationContext
-        )
-        val factory = HomeViewModelFactory(application,adapter)
-        val viewModel = factory.create(HomeViewModel::class.java)
-        val result = viewModel.pictures
-        assertThat(result, `is`(nullValue()))
+        homeViewModel.pictures = pictures
+        homeViewModel.initBlock(application)
+
+        val observer = mock(Observer::class.java) as Observer<GameApiStatus>
+        homeViewModel.status.observeForever(observer)
+
+        verify(observer).onChanged(GameApiStatus.LOADING)
+        verify(observer).onChanged(GameApiStatus.DONE)
     }
 
+
+
+
+    @Test
+    fun Test_set_username() {
+        homeViewModel.setUsername("John_Wick")
+        assert(homeViewModel.username.value == "John_Wick")
+    }
 }
