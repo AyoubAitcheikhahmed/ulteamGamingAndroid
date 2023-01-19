@@ -16,6 +16,7 @@ import com.banibegood.ulteam_gaming.domain.GamePicture
 import com.banibegood.ulteam_gaming.repository.GamesRepository
 import com.banibegood.ulteam_gaming.ui.home.GameApiStatus
 import com.banibegood.ulteam_gaming.ui.home.HomeViewModel
+import junit.framework.Assert.assertTrue
 import kotlinx.coroutines.*
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
@@ -47,7 +48,9 @@ class HomeViewModelTest {
 
     @Before
     fun setUp() {
-        binding = FragmentHomeBinding.inflate(Robolectric.buildActivity(MainActivity::class.java).get().layoutInflater)
+        binding = FragmentHomeBinding.inflate(
+            Robolectric.buildActivity(MainActivity::class.java).get().layoutInflater
+        )
         application = ApplicationProvider.getApplicationContext()
         context = ApplicationProvider.getApplicationContext()
         homeViewModel = HomeViewModel(application)
@@ -69,12 +72,20 @@ class HomeViewModelTest {
         verify(observer).onChanged(GameApiStatus.DONE)
     }
 
+    @Test
+    fun Test_init_block_with_internet() = runBlocking {
 
+        homeViewModel.initBlock(application)
+        val games = homeViewModel.games.value
+        assertTrue(games != null)
 
+    }
 
+    
     @Test
     fun Test_set_username() {
-        homeViewModel.setUsername("John_Wick")
-        assert(homeViewModel.username.value == "John_Wick")
+        homeViewModel.initBlock(application)
+        assert(homeViewModel.username.value == "Guest")
     }
+
 }
